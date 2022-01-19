@@ -1,6 +1,6 @@
 package com.example.petclinic.controller;
 
-import com.example.petclinic.service.GreetingServiceImpl;
+import com.example.petclinic.service.PropertyInjectedServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class SetterInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new SetterInjectedController();
-        controller.setGreetingService(new GreetingServiceImpl());
+        controller.setGreetingService(new PropertyInjectedServiceImpl());
     }
 
     @Test

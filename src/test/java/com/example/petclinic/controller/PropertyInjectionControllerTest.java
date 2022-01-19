@@ -1,10 +1,7 @@
 package com.example.petclinic.controller;
 
-import com.example.petclinic.service.GreetingServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectionControllerTest {
 
