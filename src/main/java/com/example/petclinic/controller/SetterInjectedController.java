@@ -2,6 +2,7 @@ package com.example.petclinic.controller;
 
 import com.example.petclinic.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -14,7 +15,7 @@ public class SetterInjectedController {
     }
 
     @Autowired
-    public void setGreetingService(GreetingService greetingService) {
+    public void setGreetingService(@Qualifier("setterInjectedServiceImpl") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 }
