@@ -28,7 +28,7 @@ public class PetClinicApplication {
         System.out.println(myController1);
 
         System.out.println("----------------------------");
-        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("propertyInjectionController");
+        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("abc");
         System.out.println(propertyInjectionController.getGreeting());
 
         System.out.println("----------------------------");
