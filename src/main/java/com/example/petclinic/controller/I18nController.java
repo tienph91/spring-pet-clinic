@@ -1,17 +1,19 @@
 package com.example.petclinic.controller;
 
 import com.example.petclinic.service.GreetingService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-@Controller("abc")
-public class PropertyInjectionController {
+@Controller
+public class I18nController {
 
-    @Autowired
-    private GreetingService greetingService;
+    private final GreetingService greetingService;
 
-    public String getGreeting() {
+    public I18nController(@Qualifier("i18nservice") GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayHello() {
         return greetingService.sayGreeting();
     }
 }

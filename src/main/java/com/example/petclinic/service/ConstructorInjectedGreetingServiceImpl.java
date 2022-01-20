@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("service-default")
 @Primary
 public class ConstructorInjectedGreetingServiceImpl implements GreetingService {
 

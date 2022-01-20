@@ -1,9 +1,7 @@
 package com.example.petclinic;
 
-import com.example.petclinic.controller.ConstructorInjectedController;
-import com.example.petclinic.controller.MyController;
-import com.example.petclinic.controller.PropertyInjectionController;
-import com.example.petclinic.controller.SetterInjectedController;
+import com.example.petclinic.configuration.Mail;
+import com.example.petclinic.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -24,7 +22,7 @@ public class PetClinicApplication {
         System.out.println(myController1);
 
         System.out.println("----------------------------");
-        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("propertyInjectionController");
+        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("abc");
         System.out.println(propertyInjectionController.getGreeting());
 
         System.out.println("----------------------------");
@@ -34,6 +32,14 @@ public class PetClinicApplication {
         System.out.println("----------------------------");
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) applicationContext.getBean("constructorInjectedController");
         System.out.println(constructorInjectedController.getGreeting());
+
+        System.out.println("----------------------------");
+        Mail mail = (Mail) applicationContext.getBean("mail");
+        System.out.println(mail.toString());
+
+        System.out.println("----------------------------");
+        I18nController i18nController = (I18nController) applicationContext.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
 
     }
 
