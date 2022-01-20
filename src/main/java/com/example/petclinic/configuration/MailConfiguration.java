@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("EN")
+@Profile({"EN", "default"})
 public class MailConfiguration {
 
     @Bean("mail")
