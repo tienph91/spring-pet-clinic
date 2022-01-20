@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 
 @Service("service-default")
 @Primary
+import org.springframework.stereotype.Service;
+
+@Service
+@Qualifier("abc")
 public class ConstructorInjectedGreetingServiceImpl implements GreetingService {
 
     @Override
