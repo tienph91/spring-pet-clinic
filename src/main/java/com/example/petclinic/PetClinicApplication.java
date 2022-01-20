@@ -40,6 +40,10 @@ public class PetClinicApplication {
         System.out.println("----------------------------");
         I18nGreetingController i18nGreetingController = (I18nGreetingController) applicationContext.getBean("i18nGreetingController");
         System.out.println(i18nGreetingController.sayHello());
+
+        System.out.println("----------------------------");
+        PetController petController = (PetController) applicationContext.getBean("petController");
+        System.out.println(petController.sayHello());
     }
 
 }
