@@ -28,7 +28,6 @@ public class I18nGreetingController implements InitializingBean, DisposableBean,
 
     @Override
     public void setBeanName(String name) {
-        this.setBeanName("abc");
     }
 
     @Override
