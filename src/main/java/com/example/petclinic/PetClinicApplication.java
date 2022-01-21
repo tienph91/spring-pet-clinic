@@ -38,6 +38,10 @@ public class PetClinicApplication {
         System.out.println(mail.toString());
 
         System.out.println("----------------------------");
+        Mail mail1 = (Mail) applicationContext.getBean("mail1");
+        System.out.println(mail1.toString());
+
+        System.out.println("----------------------------");
         I18nGreetingController i18nGreetingController = (I18nGreetingController) applicationContext.getBean("i18nGreetingController");
         System.out.println(i18nGreetingController.sayHello());
 
