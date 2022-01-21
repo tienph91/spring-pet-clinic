@@ -22,7 +22,7 @@ public class PetClinicApplication {
         System.out.println(myController1);
 
         System.out.println("----------------------------");
-        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("abc");
+        PropertyInjectionController propertyInjectionController = (PropertyInjectionController) applicationContext.getBean("propertyInjectionController");
         System.out.println(propertyInjectionController.getGreeting());
 
         System.out.println("----------------------------");
@@ -38,9 +38,16 @@ public class PetClinicApplication {
         System.out.println(mail.toString());
 
         System.out.println("----------------------------");
-        I18nController i18nController = (I18nController) applicationContext.getBean("i18nController");
-        System.out.println(i18nController.sayHello());
+        Mail mail1 = (Mail) applicationContext.getBean("mail1");
+        System.out.println(mail1.toString());
 
+        System.out.println("----------------------------");
+        I18nGreetingController i18nGreetingController = (I18nGreetingController) applicationContext.getBean("i18nGreetingController");
+        System.out.println(i18nGreetingController.sayHello());
+
+        System.out.println("----------------------------");
+        PetController petController = (PetController) applicationContext.getBean("petController");
+        System.out.println(petController.sayHello());
     }
 
 }
