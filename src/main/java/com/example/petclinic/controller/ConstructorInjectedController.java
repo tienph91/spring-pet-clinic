@@ -3,10 +3,14 @@ package com.example.petclinic.controller;
 import com.example.petclinic.service.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class ConstructorInjectedController {
+
+    @Value("${value.from.file}")
+    private String valueFromFile;
 
     private GreetingService greetingService;
 
