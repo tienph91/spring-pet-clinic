@@ -1,8 +1,8 @@
 package com.example.petclinic;
 
 import com.example.petclinic.configuration.Mail;
-import com.example.petclinic.controller.*;
 import com.example.petclinic.service.InsuranceController;
+import com.example.petclinic.service.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -55,6 +55,7 @@ public class PetClinicApplication {
         System.out.println("----------------------------");
         InsuranceController insuranceController = (InsuranceController) applicationContext.getBean("insuranceController");
         insuranceController.claimInsurance();
+
     }
 
 }

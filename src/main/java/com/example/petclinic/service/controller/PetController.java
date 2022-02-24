@@ -1,15 +1,15 @@
-package com.example.petclinic.controller;
+package com.example.petclinic.service.controller;
 
 import com.example.petclinic.service.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class I18nController {
+public class PetController {
 
     private final GreetingService greetingService;
 
-    public I18nController(@Qualifier("i18nservice") GreetingService greetingService) {
+    public PetController(@Qualifier("petService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
