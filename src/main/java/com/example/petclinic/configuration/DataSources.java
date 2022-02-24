@@ -1,7 +1,8 @@
 package com.example.petclinic.configuration;
 
+import com.example.petclinic.controller.MyController;
+import com.example.petclinic.controller.PetController;
 import com.example.petclinic.service.controller.MyController;
-import com.example.petclinic.service.controller.PetController;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
