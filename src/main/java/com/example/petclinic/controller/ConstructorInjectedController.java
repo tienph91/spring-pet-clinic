@@ -1,6 +1,7 @@
 package com.example.petclinic.controller;
 
 import com.example.petclinic.service.GreetingService;
+import com.example.petclinic.service.controller.MyController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,7 +25,7 @@ public class ConstructorInjectedController {
     private PetController petController;
 
     @Autowired
-    public ConstructorInjectedController(@Qualifier("abc") GreetingService greetingService) {
+    public ConstructorInjectedController(@Qualifier("i18nService") GreetingService greetingService) {
         this.greetingService = greetingService;
         i = 1;
     }

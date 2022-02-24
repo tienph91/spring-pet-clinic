@@ -1,6 +1,5 @@
 package com.example.petclinic.configuration;
 
-import com.example.petclinic.controller.MyController;
 import com.example.petclinic.controller.PetController;
 import com.example.petclinic.service.controller.MyController;
 import org.springframework.beans.factory.DisposableBean;

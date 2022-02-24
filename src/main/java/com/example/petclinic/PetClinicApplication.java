@@ -3,6 +3,9 @@ package com.example.petclinic;
 import com.example.petclinic.configuration.Mail;
 import com.example.petclinic.controller.*;
 import com.example.petclinic.service.InsuranceController;
+import com.example.petclinic.service.controller.MyController;
+import com.example.petclinic.service.controller.PropertyInjectionController;
+import com.example.petclinic.service.controller.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -56,13 +59,6 @@ public class PetClinicApplication {
         InsuranceController insuranceController = (InsuranceController) applicationContext.getBean("insuranceController");
         insuranceController.claimInsurance();
 
-        System.out.println("----------------------------");
-        PetController petController = (PetController) applicationContext.getBean("petController");
-        System.out.println(petController.sayHello());
-
-        System.out.println("----------------------------");
-        InsuranceController insuranceController = (InsuranceController) applicationContext.getBean("insuranceController");
-        insuranceController.claimInsurance();
     }
 
 }

@@ -1,7 +1,7 @@
 package com.example.petclinic.configuration;
 
 import com.example.petclinic.controller.I18nGreetingController;
-import com.example.petclinic.controller.MyController;
+import com.example.petclinic.service.controller.MyController;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
