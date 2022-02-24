@@ -6,7 +6,9 @@ import com.example.petclinic.service.InsuranceController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan(basePackages = {"com.example", "com.example.petclinic"})
 @SpringBootApplication
 public class PetClinicApplication {
 

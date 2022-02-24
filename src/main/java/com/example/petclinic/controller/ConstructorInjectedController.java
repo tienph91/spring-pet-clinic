@@ -39,7 +39,7 @@ public class ConstructorInjectedController {
     }
 
     @Autowired
-    public void setGreetingService(GreetingService greetingService) {
+    public void setGreetingService(@Qualifier("i18nService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 
