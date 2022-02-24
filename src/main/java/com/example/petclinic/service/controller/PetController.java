@@ -4,7 +4,7 @@ import com.example.petclinic.service.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
-@Controller
+@Controller("ZZZ")
 public class PetController {
 
     private final GreetingService greetingService;

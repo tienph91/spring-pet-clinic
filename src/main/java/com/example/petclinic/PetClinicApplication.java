@@ -40,12 +40,12 @@ public class PetClinicApplication {
         System.out.println(constructorInjectedController.getGreeting());
 
         System.out.println("----------------------------");
-        Mail mail = (Mail) applicationContext.getBean("mail");
-        System.out.println(mail.toString());
+//        Mail mail = (Mail) applicationContext.getBean("mail");
+//        System.out.println(mail.toString());
 
         System.out.println("----------------------------");
-        Mail mail1 = (Mail) applicationContext.getBean("mail1");
-        System.out.println(mail1.toString());
+//        Mail mail1 = (Mail) applicationContext.getBean("mail1");
+//        System.out.println(mail1.toString());
 
         System.out.println("----------------------------");
         I18nGreetingController i18nGreetingController = (I18nGreetingController) applicationContext.getBean("i18nGreetingController");
@@ -59,6 +59,9 @@ public class PetClinicApplication {
         InsuranceController insuranceController = (InsuranceController) applicationContext.getBean("insuranceController");
         insuranceController.claimInsurance();
 
+        System.out.println("----------------------------");
+        HelloWorldController helloWorldController = (HelloWorldController) applicationContext.getBean("helloWorldController");
+        helloWorldController.helloWorld();
     }
 
 }

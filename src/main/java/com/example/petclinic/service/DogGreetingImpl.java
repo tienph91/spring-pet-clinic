@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service("petService")
-@Profile({"Dog","default"})
+@Profile({"1","default1"})
 public class DogGreetingImpl implements GreetingService{
 
     @Override
