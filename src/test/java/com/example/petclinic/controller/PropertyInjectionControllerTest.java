@@ -1,5 +1,6 @@
 package com.example.petclinic.controller;
 
+import com.example.petclinic.service.controller.PropertyInjectionController;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

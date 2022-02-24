@@ -1,4 +1,4 @@
-package com.example.petclinic.controller;
+package com.example.petclinic.service.controller;
 
 import com.example.petclinic.service.GreetingService;
 import org.springframework.beans.factory.annotation.Qualifier;
