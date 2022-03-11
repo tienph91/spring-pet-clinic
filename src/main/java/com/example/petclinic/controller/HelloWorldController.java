@@ -9,7 +9,7 @@ public class HelloWorldController {
 
     private final HelloWorldService helloWorldService;
 
-    public HelloWorldController(@Qualifier("helloWorldENService") HelloWorldService helloWorldService) {
+    public HelloWorldController(HelloWorldService helloWorldService) {
         this.helloWorldService = helloWorldService;
     }
 

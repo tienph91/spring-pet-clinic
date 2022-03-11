@@ -3,6 +3,8 @@ package com.example.petclinic;
 import com.example.petclinic.configuration.Mail;
 import com.example.petclinic.controller.*;
 import com.example.petclinic.service.InsuranceController;
+import com.example.petclinic.service.PrototypeBean;
+import com.example.petclinic.service.SingletonBean;
 import com.example.petclinic.service.controller.MyController;
 import com.example.petclinic.service.controller.PropertyInjectionController;
 import com.example.petclinic.service.controller.SetterInjectedController;
@@ -10,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Lazy;
 
 @ComponentScan(basePackages = {"com.example", "com.example.petclinic"})
 @SpringBootApplication
@@ -62,6 +65,17 @@ public class PetClinicApplication {
         System.out.println("----------------------------");
         HelloWorldController helloWorldController = (HelloWorldController) applicationContext.getBean("helloWorldController");
         helloWorldController.helloWorld();
+
+        SingletonBean singletonBean1 = (SingletonBean) applicationContext.getBean("singletonBean");
+        SingletonBean singletonBean2 = (SingletonBean) applicationContext.getBean("singletonBean");
+        System.out.println(singletonBean1);
+        System.out.println(singletonBean2);
+
+        PrototypeBean prototypeBean1 = (PrototypeBean) applicationContext.getBean("prototypeBean");
+        PrototypeBean prototypeBean2 = (PrototypeBean) applicationContext.getBean("prototypeBean");
+        System.out.println(prototypeBean1);
+        System.out.println(prototypeBean2);
+
     }
 
 }

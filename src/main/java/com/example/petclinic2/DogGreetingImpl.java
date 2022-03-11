@@ -1,10 +1,11 @@
 package com.example.petclinic2;
 
 import com.example.petclinic.service.GreetingService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service("petService")
+@Service
 @Profile({"Dog","default"})
 public class DogGreetingImpl implements GreetingService {
 
